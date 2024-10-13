@@ -1,0 +1,21 @@
+local player = game.Players.LocalPlayer
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "E r r 0 r  H u b", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({ Name = "Main Scripts", Icon = "rbxassetid://4483345998", PremiumOnly = false }) 
+local Section = Tab:AddSection({ Name = "LocalPlayer" })
+
+OrionLib:MakeNotification({ Name = "Welcome!", Content = "Welcome to Err0r Hub!", Image = "rbxassetid://4483345998", Time = 5 })
+Tab:AddButton({ Name = "Inf Cash (Client)", Callback = function() player.leaderstats.Cash.Value = 999999999 end })
+Tab:AddButton({ Name = "No Roll Cooldown (may be laggy)", Callback = function() player.Cooldown.Value = 0 end })
+Tab:AddToggle({ Name = "Free Quick Roll", Callback = function() player.QuickRoll.Value = true end })
+Tab:AddButton({ Name = "more coming soon...", Callback = function()  end })
+
+local Tab1 = Window:MakeTab({ Name = "Player", Icon = "rbxassetid://4483345998", PremiumOnly = false }) 
+
+Tab1:AddButton({ Name = "Walkspeed", Callback = function() player.Character.Humanoid.Walkspeed = 100 end })
+Tab1:AddButton({ Name = "Inf Health", Callback = function() player.Character.Humanoid.Health = 999999999 end })
+
+local Tab2 = Window:MakeTab({ Name = "Extra", Icon = "rbxassetid://4483345998", PremiumOnly = false }) 
+
+Tab2:AddButton({ Name = "Inf Yield", Callback = function() loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))() end })
+Tab2:AddButton({ Name = "Dex V3", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))() end })
